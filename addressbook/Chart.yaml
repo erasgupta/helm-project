@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart to deploy addressbook front end  web application.
+name: addressbook
+version: 0.1
