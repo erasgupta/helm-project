@@ -14,10 +14,7 @@ pipeline {
         }
         stage('Deploy') {
           steps {
-           withKubeConfig([credentialsId: 'jenkins-robot', serverUrl: 'https://172.31.93.54:6443']) {
-            sh 'helm delete prod-addressbook'
             sh 'helm install prod-addressbook ./addressbook/ --values ./addressbook/prod.yaml'
-           }
          }
         }
     }
